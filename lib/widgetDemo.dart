@@ -8,21 +8,21 @@ class WidgetDemo extends StatelessWidget {
         title: "Shop Detail",
         home: Scaffold(
           body:  SafeArea(
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: Text('Deliver features faster', textAlign: TextAlign.center),
+            child: Container(
+              constraints: BoxConstraints(minHeight: 10),
+              child: Container(
+                color: Colors.cyanAccent,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+//                  mainAxisSize: MainAxisSize.max,
+//                mainAxisSize: _mainAxisSize,
+                  children: [
+                    Container(color: Colors.redAccent,width: 50, height: 50,),
+                    Container(color: Colors.orangeAccent,width: 50, height: 50,)
+                  ],
                 ),
-                Expanded(
-                  child: Text('Craft beautiful UIs', textAlign: TextAlign.center),
-                ),
-                Expanded(
-                  child: FittedBox(
-                    fit: BoxFit.contain, // otherwise the logo will be tiny
-                    child: const FlutterLogo(),
-                  ),
-                ),
-              ],
+              )
             ),
           ),
         )
